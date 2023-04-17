@@ -1,0 +1,3 @@
+When running gunicorn, binding it with 0.0.0.0:<port> in order to expose port to outside. If not, the loopback IP (127.0.0.1 or localhost) is used.
+This makes gunicorn container cannot be accessed from Nginx reverse proxy.
+Must change ALLOWED_HOSTS of Django to '*' so that Django will not cancel passed requests form Nginx.
